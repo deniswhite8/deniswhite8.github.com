@@ -8,10 +8,10 @@ h2
 	color: #666;
 }
 
-body {
+html {
     background: url(29-a.png);
 }
-body:before {
+html:before {
     background: url(37-a.png);
     position: absolute;
     top: 0; left: 0;
@@ -20,7 +20,7 @@ body:before {
     content: ' ';
 }
 
-body:after {
+html:after {
     background: url(53-a.png);
     position: absolute;
     top: 0; left: 0;
