@@ -4,9 +4,14 @@
 	<meta charset="utf-8">
 	<title>Досье №492167</title>
 	<style type="text/css">
-		h1, p
+		h2, p
 		{
 			margin: 0 0 0 0;
+		}
+		
+		h2
+		{
+			color: #666;
 		}
 		
 		html
@@ -19,60 +24,41 @@
 		
 		.main
 		{
-			margin: 0 auto 50px;
+			margin: 0 auto;
     		width: 80%;
-			color: #333125;
-			background: #dcddd3;
-			border: solid 5px #666458;
+			color: black;
+			background: #f0f0f0;
+			border: solid 5px #666;
 			border-style: dashed;
 			padding: 10px;
+			border-radius:10px; 
+			-webkit-border-radius:10px; 
+			-moz-border-radius:10px;
+			
+
+			-webkit-box-shadow: 0 0 100px #f0f0f0;
+			-moz-box-shadow: 0 0 100px #f0f0f0;
+			box-shadow: 0 0 100px #f0f0f0;
+
+		}
+		
+		.footer
+		{
+			position: fixed;
+			left: 0; bottom: 0;
+			padding: 10px 0 10px 0;
+			background: #39b54a;
+			color: #fff;
+			width: 100%;
+			text-align: right;
 		}
 	</style>
 	<script type="text/javascript">
-		var str1 = "Коротко о себе:";
-		var str2 = "Контактная информация:";
-		var mas1 = str1.split("");
-		var mas2 = str2.split("");
-		var text1 = "";
-		var text2 = "";
-	
-		var x1 = setInterval("write1()",100);
-		var x2 = setInterval("write2()",100);
-		var i1 = 0;
-		var i2 = 0;
-		function write1()
-		{
-			if(i1 < mas1.length)
-			{
-				text1 += mas1[i1];
-				i1++;
-				document.getElementById("1").innerText = text1+"_";
-			}
-			else
-			{
-				clearInterval(x1);
-				document.getElementById("1").innerText = text1;
-			}
-		}
-		function write2()
-		{
-			if(i2 < mas2.length)
-			{
-				text2 += mas2[i2];
-				i2++;
-				document.getElementById("2").innerText = text2+"_";
-			}
-			else
-			{
-				clearInterval(x2);
-				document.getElementById("2").innerText = text2;
-			}
-		}
 	</script>
 </head>
 <body>
 	<div class="main">
-		<h1 id="1"></h1>
+		<h2>Коротко о себе:</h2>
 		<p>Белов Денис Андреевич, 1995 года рождения, 17 (почти 18) лет.</p>
 	
 		<ol>	
@@ -89,9 +75,12 @@
 		</ol>
 	
 	
-		<h1 id="2"></h1>
+		<h2>Контактная информация:</h2>
 		<p>Телефон: +7 988 950 49 85
 		<br>
 		E-mail: deniswhite8@gmail.com</p>
+	</div>
+	<div class="footer">
+	&copy; <i style="padding:0 10px 0 0;" id="1">denis</i>
 	</div>
 </body>
