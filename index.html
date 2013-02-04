@@ -1,9 +1,97 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <title>Test</title>
+	<meta charset="utf-8">
+	<title>Досье №492167</title>
+	<style type="text/css">
+		h1, p
+		{
+			margin: 0 0 0 0;
+		}
+		
+		html
+		{
+			background-image: url(29-a.png),url(37-a.png), url(53-a.png);
+			padding:0;
+			margin:0;
+			height: 100%;
+		}
+		
+		.main
+		{
+			margin: 0 auto 50px;
+    		width: 80%;
+			color: #333125;
+			background: #dcddd3;
+			border: solid 5px #666458;
+			border-style: dashed;
+			padding: 10px;
+		}
+	</style>
+	<script type="text/javascript">
+		var str1 = "Коротко о себе:";
+		var str2 = "Контактная информация:";
+		var mas1 = str1.split("");
+		var mas2 = str2.split("");
+		var text1 = "";
+		var text2 = "";
+	
+		var x1 = setInterval("write1()",100);
+		var x2 = setInterval("write2()",100);
+		var i1 = 0;
+		var i2 = 0;
+		function write1()
+		{
+			if(i1 < mas1.length)
+			{
+				text1 += mas1[i1];
+				i1++;
+				document.getElementById("1").innerText = text1+"_";
+			}
+			else
+			{
+				clearInterval(x1);
+				document.getElementById("1").innerText = text1;
+			}
+		}
+		function write2()
+		{
+			if(i2 < mas2.length)
+			{
+				text2 += mas2[i2];
+				i2++;
+				document.getElementById("2").innerText = text2+"_";
+			}
+			else
+			{
+				clearInterval(x2);
+				document.getElementById("2").innerText = text2;
+			}
+		}
+	</script>
 </head>
 <body>
-	<h1>Test</h1>
+	<div class="main">
+		<h1 id="1"></h1>
+		<p>Белов Денис Андреевич, 1995 года рождения, 17 (почти 18) лет.</p>
+	
+		<ol>	
+			<li>Где вы учитесь или учились?</li>
+			<p>На данный момент учусь в ТТИ ЮФУ, на первом курсе по спциальности "Программная инженерия". До этого - в ТМОЛе, в физико-математическом классе.</p>
+			<li>Приведите примеры сайтов, сделанных вами или с вашим участием, если таковые имеются.</li>
+			<p>Недавно у вас был конкурс сайтов, на тему "Розыск домашних животных", я посылал туда свой сайт. Было ещё парочку сайтов - но их больше нет, вообще.</p>
+			<li>Какие книги (блоги, курсы) по веб-разработке, дизайну и программированию вы читали в последнее время? Чему из них научились?</li>
+			<p>В последнее время книг по веб-разработке и программированию не читал, читал множество всевозможных статей, блогов, т.д.</p>
+			<li>Как у вас с английским?</li>
+			<p>Свободо разговаривать не могу, но почитать текст со словарем вполне сумею.</p>
+			<li>Чем вас прельщает интернет, веб-дизайн и веб-разработка?</li>
+			<p>Чем прельщает программирование и дизайн в целом? Наверное, как один из способов самовыражения.</p>
+		</ol>
+	
+	
+		<h1 id="2"></h1>
+		<p>Телефон: +7 988 950 49 85
+		<br>
+		E-mail: deniswhite8@gmail.com</p>
+	</div>
 </body>
