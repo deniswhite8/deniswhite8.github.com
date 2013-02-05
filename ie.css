@@ -25,14 +25,6 @@ html
 	border: solid 5px #666;
 	border-style: dashed;
 	padding: 10px;
-	border-radius:10px; 
-	-webkit-border-radius:10px; 
-	-moz-border-radius:10px;
-
-	-webkit-box-shadow: 0 0 100px #f0f0f0;
-	-moz-box-shadow: 0 0 100px #f0f0f0;
-	box-shadow: 0 0 100px #f0f0f0;
-
 }
 
 .footer
