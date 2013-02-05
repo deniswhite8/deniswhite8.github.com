@@ -53,6 +53,11 @@ html
 	text-align: right;
 }
 
+.ans
+{
+	padding: 0 0 10px 20px;
+}
+
 a
 {
 	color: #08c;
