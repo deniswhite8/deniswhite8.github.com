@@ -18,7 +18,8 @@ html
 
 .main
 {
-	margin: 10px auto 50px;
+	/*margin: 10px auto 50px;*/
+	margin: 0 auto;
 	width: 80%;
 	color: black;
 	background: #f0f0f0;
