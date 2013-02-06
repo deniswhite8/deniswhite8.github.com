@@ -1,4 +1,4 @@
-h2, p
+h1, p
 {
 	margin: 0 0 0 0;
 }
@@ -8,17 +8,15 @@ p
 	padding: 0 0 0 20px;
 }
 
-h2
+h1
 {
 	color: #666;
+	font-size: x-large;
 }
 
 html
 {
 	background-image: url(29.png), url(37.png), url(53.png);
-	/*padding:0;
-	margin:0;
-	height: 100%;*/
 }
 
 .main
@@ -51,6 +49,11 @@ html
 	color: #fff;
 	width: 100%;
 	text-align: right;
+}
+
+.footer_text
+{
+	padding:0 10px 0 0;
 }
 
 .ans
