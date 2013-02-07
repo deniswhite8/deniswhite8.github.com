@@ -14,9 +14,14 @@ h1
 	font-size: x-large;
 }
 
-html
+#ok
 {
 	background-image: url(../img/29.png), url(../img/37.png), url(../img/53.png);
+}
+
+#ie8
+{
+	background-image: url(../img/ie.png);
 }
 
 .main
