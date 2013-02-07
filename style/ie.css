@@ -1,4 +1,66 @@
+h1, p
+{
+	margin: 0 0 0 0;
+}
+
+p
+{
+	padding: 0 0 0 20px;
+}
+
+h1
+{
+	color: #666;
+	font-size: x-large;
+}
+
 html
 {
 	background-image: url(../img/ie.png);
+}
+
+.main
+{
+	margin: 10px auto 50px;
+	width: 80%;
+	color: black;
+	background: #f0f0f0;
+	border: solid 5px #666;
+	border-style: dashed;
+	padding: 10px;
+}
+
+.footer
+{
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	padding: 10px 0 10px 0;
+	margin: 10px 0 0 0;
+	background: #39b54a;
+	color: #fff;
+	width: 100%;
+	text-align: right;
+}
+
+.footer_text
+{
+	padding:0 10px 0 0;
+}
+
+.ans
+{
+	padding: 0 0 10px 20px;
+}
+
+a
+{
+	color: #08c;
+	text-decoration: none;
+}
+
+span
+{
+	color: #666;
+	font-weight: bold;
 }
