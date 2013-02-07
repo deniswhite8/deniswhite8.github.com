@@ -16,7 +16,7 @@ h1
 
 html
 {
-	background-image: url(29.png), url(37.png), url(53.png);
+	background-image: url(../img/29.png), url(../img/37.png), url(../img/53.png);
 }
 
 .main
