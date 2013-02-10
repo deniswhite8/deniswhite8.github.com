@@ -30,8 +30,7 @@ html
 	width: 80%;
 	color: black;
 	background: #f0f0f0;
-	border: solid 5px #666;
-	border-style: dashed;
+	border: dashed 5px #666;
 	padding: 10px;
 	
 	border-radius:10px; 
