@@ -3,6 +3,9 @@
 	margin: 0;
 }
 
+body {
+	background: url("../img/bg.jpg");
+}
 
 .main {
 	width: 800px;
