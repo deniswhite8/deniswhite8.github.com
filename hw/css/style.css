@@ -1,0 +1,50 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+
+.main {
+	width: 800px;
+	margin: 0 auto 0;
+}
+
+.img {
+	float: left;
+	position: relative;
+}
+
+.tag {
+	position: absolute;
+	top: -12px;
+	left: -42px;
+	font-size: 14pt;
+	font-style: italic;
+	color: white;
+	padding: 2px 3px;
+}
+
+.red {
+	background: #ff6666;
+}
+
+.green {
+	background: #99cc66;
+}
+
+.blue {
+	background: #6699cc;
+}
+
+.text {
+	margin-left: 200px;
+}
+
+h1 {
+	font-size: 18pt;
+	text-decoration: underline;
+}
+
+p {
+	font-size: 14pt;
+}
