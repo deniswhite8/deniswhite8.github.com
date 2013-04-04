@@ -1,7 +1,37 @@
+/*fonts from google*/
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Sans'), local('PTSans-Regular'), url(http://themes.googleusercontent.com/static/fonts/ptsans/v4/jduSEW07_j4sIG_ERxiq4Q.woff) format('woff');
+}
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('PT Sans Bold'), local('PTSans-Bold'), url(http://themes.googleusercontent.com/static/fonts/ptsans/v4/HXiERDIZdwFzjXlbcMq7XPesZW2xOQ-xsNqO47m55DA.woff) format('woff');
+}
+@font-face {
+  font-family: 'PT Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: local('PT Sans Italic'), local('PTSans-Italic'), url(http://themes.googleusercontent.com/static/fonts/ptsans/v4/Pq7I38KtY37kAe5aYFKrSA.woff) format('woff');
+}
+@font-face {
+  font-family: 'PT Serif';
+  font-style: normal;
+  font-weight: 700;
+  src: local('PT Serif Bold'), local('PTSerif-Bold'), url(http://themes.googleusercontent.com/static/fonts/ptserif/v4/QABk9IxT-LFTJ_dQzv7xpGOb2gHztoQeulij-1lvl-8.woff) format('woff');
+}
+/**/
+
+/*reset all*/
 * {
 	padding: 0;
 	margin: 0;
 }
+/**/
+
 
 p, h2, .flag, a, input {
 	font-family: 'PT Sans', sans-serif;
@@ -147,6 +177,7 @@ footer .copy {
 	height: 24px;
 	margin: 0 auto;
 	margin-bottom: 18px;
+	padding: 2px;
 }
 
 .login-form input[type=submit]{
@@ -159,6 +190,7 @@ footer .copy {
 }
 
 header, .main, footer {
+	/*blur не блюрит фон :(*/
 	-webkit-filter: blur(2px);
 }
 
