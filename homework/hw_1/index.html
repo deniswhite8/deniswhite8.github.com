@@ -9,7 +9,8 @@
 	<header>
 		<div class="line"></div>
 		<p class="mini-logo">lorem impsum news</p>
-		<a href="#" class="login">Войти</a>
+		<a href="#" class="login" onclick="document.getElementById('overlay').style.visibility='visible';
+										   document.getElementById('loginBox').style.visibility='visible'">Войти</a>
 		<h1>Новости</h1>
 		<p class="under-logo">скандалы &bull; интриги &bull; расследования</p>
 	</header>
@@ -17,36 +18,34 @@
 		<div class="news">
 			<div class="flag red">Скандал</div>
 			<img src="img/1.jpg" alt="">
-			<h2>Страны Евросоюза могут ввести санкции против Google</h2>
+			<h2><a href="#">Страны Евросоюза могут ввести санкции против Google</a></h2>
 			<p>Европейские власти обеспокоены политикой конфиденциальности компании Google. Google хранит личные данные пользователей в одном профиле, в котором может объединяться информация с нескольких десятков разных сайтов.</p>
-			<div class="clear"></div>
 		</div>
 		<div class="news">
 			<div class="flag green">Интрига</div>
 			<img src="img/2.jpg" alt="">
-			<h2>ФАС уличила ВГТРК в рекламе алкоголя при трансляции футбольного матча</h2>
+			<h2><a href="#">ФАС уличила ВГТРК в рекламе алкоголя при трансляции футбольного матча</a></h2>
 			<p>Проверка фотографий и видео-записей показала, что на рекламных стендах стадиона "Стэмфорд Бридж" во время указанного матча не были размещены рекламные плакаты данных производителей алкогольной продукции. Рассмотрение данного дела ФАС России назначил на 15 мая 2013 года.
 			</p>
-			<div class="clear"></div>
 		</div>
 		<div class="news">
 			<div class="flag blue">Расследование</div>
 			<img src="img/3.jpg" alt="">
-			<h2>Возобновление борьбы за домены в зоне .рф маловероятно, считают юристы</h2>
+			<h2><a href="#">Возобновление борьбы за домены в зоне .рф маловероятно, считают юристы</a></h2>
 			<p>"По всем 70914 доменным именам поступили заявки от клиентов, желающих их приобрести в указанном порядке", - говорится в тексте судебного решения от 16 ноября 2011 г. Апелляционная инстанция частично удовлетворила иск ФАС, а кассационная передала дело на рассмотрение в президиум ВАС.</p>
-			<div class="clear"></div>
 		</div>
 	</div>
 	<footer>
 		<p class="copy">&copy;ЗАО &laquo;Лорем ипсум ньюс&raquo;</p>
 	</footer>
-	<div class="overlay"></div>
-	<div class="login-box">
+	<div class="overlay" id="overlay"></div>
+	<div class="login-box" id="loginBox">
 		<form action="#" class="login-form">
 			<input type="text" name="login" placeholder="Логин">
 			<input type="password" name="passwd" placeholder="Пароль">
 			<input type="submit" value="Войти">
-			<a href="#">Отмена</a>
+			<a href="#" class="cancel"  onclick="document.getElementById('overlay').style.visibility='hidden';
+												 document.getElementById('loginBox').style.visibility='hidden'">Отмена</a>
 		</form>
 	</div>
 </body>

@@ -77,6 +77,14 @@ body {
 	margin-left: 200px;
 }
 
+.news:after {
+	content: ".";
+	visibility: hidden;
+	display: block;
+	clear: both;
+	height: 0;
+}
+
 .news h2 {
 	font-size: 18px;
 	text-decoration: underline;
@@ -88,12 +96,13 @@ body {
 	font-size: 14px;
 }
 
-.news img {
-	float: left;
+.news h2 a {
+	text-decoration: none;
+	color: black;
 }
 
-.clear {
-	clear: both;
+.news img {
+	float: left;
 }
 
 header .mini-logo {
@@ -123,7 +132,7 @@ header .under-logo {
 	margin-bottom: 125px;
 }
 
-a {
+a.login, a.cancel {
 	text-decoration: none;
 	font-size: 14px;
 	color: #666;
@@ -138,7 +147,7 @@ header .login {
 
 header .line {
 	width: 100%;
-	height: 4px;
+	height: 3px;
 	background: black;
 }
 
@@ -161,6 +170,7 @@ footer .copy {
 	height: 230px;
 	background: white;
 	box-shadow: 0 0 24px black;
+	visibility: hidden;
 }
 
 .login-form {
@@ -191,7 +201,7 @@ footer .copy {
 
 header, .main, footer {
 	/*blur не блюрит фон :(*/
-	-webkit-filter: blur(2px);
+	/*-webkit-filter: blur(2px);*/
 }
 
 .overlay {
@@ -202,4 +212,5 @@ header, .main, footer {
 	bottom: 0;
 	background: black;
 	opacity: 0.3;
+	visibility: hidden;
 }
