@@ -169,7 +169,7 @@ footer .copy {
 	width: 365px;
 	height: 230px;
 	background: white;
-	box-shadow: 0 0 24px black;
+	box-shadow: 0 0 24px rgba(0,0,0,0.5);
 	visibility: hidden;
 }
 
