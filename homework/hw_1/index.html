@@ -6,15 +6,19 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<header>
+	<header id="header">
 		<div class="line"></div>
 		<p class="mini-logo">lorem impsum news</p>
 		<a href="#" class="login" onclick="document.getElementById('overlay').style.visibility='visible';
-										   document.getElementById('loginBox').style.visibility='visible'">Войти</a>
+										   document.getElementById('loginBox').style.visibility='visible';
+										   document.getElementById('main').className='main blur';
+										   document.getElementById('header').className='blur';
+										   document.getElementById('footer').className='blur';
+										   return false;">Войти</a>
 		<h1>Новости</h1>
 		<p class="under-logo">скандалы &bull; интриги &bull; расследования</p>
 	</header>
-	<div class="main">
+	<div class="main" id="main">
 		<div class="news">
 			<div class="flag red">Скандал</div>
 			<img src="img/1.jpg" alt="">
@@ -35,7 +39,7 @@
 			<p>"По всем 70914 доменным именам поступили заявки от клиентов, желающих их приобрести в указанном порядке", - говорится в тексте судебного решения от 16 ноября 2011 г. Апелляционная инстанция частично удовлетворила иск ФАС, а кассационная передала дело на рассмотрение в президиум ВАС.</p>
 		</div>
 	</div>
-	<footer>
+	<footer id="footer">
 		<p class="copy">&copy;ЗАО &laquo;Лорем ипсум ньюс&raquo;</p>
 	</footer>
 	<div class="overlay" id="overlay"></div>
@@ -44,8 +48,12 @@
 			<input type="text" name="login" placeholder="Логин">
 			<input type="password" name="passwd" placeholder="Пароль">
 			<input type="submit" value="Войти">
-			<a href="#" class="cancel"  onclick="document.getElementById('overlay').style.visibility='hidden';
-												 document.getElementById('loginBox').style.visibility='hidden'">Отмена</a>
+			<a href="#" class="cancel" onclick="document.getElementById('overlay').style.visibility='hidden';
+												 document.getElementById('loginBox').style.visibility='hidden';
+												 document.getElementById('main').className='main';
+											     document.getElementById('header').className='';
+											     document.getElementById('footer').className='';
+											     return false;">Отмена</a>
 		</form>
 	</div>
 </body>

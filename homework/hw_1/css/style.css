@@ -199,9 +199,8 @@ footer .copy {
 	background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(204,204,204,1) 100%);
 }
 
-header, .main, footer {
-	/*blur не блюрит фон :(*/
-	/*-webkit-filter: blur(2px);*/
+.blur {
+	-webkit-filter: blur(2px);
 }
 
 .overlay {
