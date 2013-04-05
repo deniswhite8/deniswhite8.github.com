@@ -39,6 +39,7 @@ p, h2, .flag, a, input {
 
 body {
 	background: url("../img/bg.jpg");
+	min-width: 800px;
 }
 
 .main, footer .copy {
