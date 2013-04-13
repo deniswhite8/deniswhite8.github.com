@@ -12,12 +12,6 @@
   src: local('PT Sans Bold'), local('PTSans-Bold'), url(http://themes.googleusercontent.com/static/fonts/ptsans/v4/HXiERDIZdwFzjXlbcMq7XPesZW2xOQ-xsNqO47m55DA.woff) format('woff');
 }
 @font-face {
-  font-family: 'PT Sans';
-  font-style: italic;
-  font-weight: 400;
-  src: local('PT Sans Italic'), local('PTSans-Italic'), url(http://themes.googleusercontent.com/static/fonts/ptsans/v4/Pq7I38KtY37kAe5aYFKrSA.woff) format('woff');
-}
-@font-face {
   font-family: 'PT Serif';
   font-style: normal;
   font-weight: 700;
@@ -38,6 +32,10 @@ body {
   border-top: 3px solid black;
 }
 
+p a li h3 {
+    font-family: 'PT Sans', sans-serif;
+}
+
 header .mini-logo {
   font-size: 24px;
   font-weight: bold;
@@ -54,6 +52,18 @@ header nav {
 
 header nav p {
   display: inline;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+header nav a {
+  display: inline;
+}
+
+a {
+  font-size: 14px;
+  color: #036;
+  text-decoration: underline;
 }
 
 header nav * {
@@ -62,6 +72,8 @@ header nav * {
 
 header .menu {
   float: right;
+  font-size: 14px;
+  color: #666;
 }
 
 header .menu:hover ul {
@@ -85,42 +97,66 @@ header .menu ul {
 .main .article aside {
   float: left;
   width: 180px;
+  font-size: 10px;
+  color: #666;
+  line-height: 16px;
 }
 
 .main .article article {
   margin-left: 200px;
   width: 600px;
+  font-size: 14px;
+  color: #333;
 }
 
 .main .article h2 {
   margin-bottom: 75px;
   margin-left: 200px;
   width: 600px;
+  font-family: 'PT Serif', serif;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .others {
   margin-top: 80px;
   padding-top: 20px;
-  border-top: 3px solid #666;
+  border-top: 3px solid #b2b2b2;
 }
 
-.others p {
+.others > p {
   width: 180px;
   display: inline;
   float: left;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.others div p {
+  font-size: 12px;
+  color: #333;
 }
 
 .others div {
-  margin-left: 20px;
+  margin-left: 16px;
   width: 190px;
   float: left;
+}
+
+.others:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  clear: both;
+  height: 0;
 }
 
 footer .copy {
   font-size: 12px;
   color: #666;
-  border-top: 1px solid #666;
+  border-top: 1px solid #999;
   padding-top: 10px;
-  margin-bottom: 80px;
-  margin-top: 150px;
+  margin-bottom: 60px;
+  margin-top: 35px;
 }
