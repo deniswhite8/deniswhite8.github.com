@@ -28,12 +28,17 @@
 
 body {
   background: url("../img/bg.jpg");
-  min-width: 800px;
   border-top: 3px solid black;
 }
 
 p a li h3 {
     font-family: 'PT Sans', sans-serif;
+}
+
+a {
+  font-size: 14px;
+  color: #036;
+  text-decoration: underline;
 }
 
 header .mini-logo {
@@ -60,12 +65,6 @@ header nav a {
   display: inline;
 }
 
-a {
-  font-size: 14px;
-  color: #036;
-  text-decoration: underline;
-}
-
 header nav * {
   margin-right: 20px;
 }
@@ -74,15 +73,44 @@ header .menu {
   float: right;
   font-size: 14px;
   color: #666;
+  background: #ddd;
+  padding: 3px;
+  margin: 15px 10px 0 0;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px gray;
+  background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(218,218,218,1) 100%);
+  width: 115px;
+}
+
+header .menu img {
+  margin-left: 9px;
+}
+
+header .menu p {
+  margin: 3px 3px 3px 0;
+  text-shadow: 1px 1px white;
+  display: inline;
+}
+
+header .menu li {
+  margin: 3px;
+  margin-left: 20px;
+  margin-top: 7px;
 }
 
 header .menu:hover ul {
   display: block;
+  margin-top: 10px;
 }
 
 header .menu ul {
   list-style: none;
   display: none;
+}
+
+header .menu a {
+  text-decoration: underline;
+  color: #666;
 }
 
 .main, footer {
@@ -107,6 +135,10 @@ header .menu ul {
   width: 600px;
   font-size: 14px;
   color: #333;
+}
+
+.main .article article p {
+  margin-bottom: 25px;
 }
 
 .main .article h2 {
