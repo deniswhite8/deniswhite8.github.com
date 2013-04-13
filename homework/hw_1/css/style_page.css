@@ -47,12 +47,14 @@ header .mini-logo {
   font-weight: bold;
   font-variant: small-caps;
   margin-left: 10px;
-  float: left;
+  /*float: left;*/
+  position: absolute;
+  top: 4px;
 }
 
 header nav {
    margin-top: 15px;
-   margin-left: -webkit-calc(50% - 387px);
+   margin-left: -webkit-calc(50% - 200px);
    display: inline-block;
 }
 
