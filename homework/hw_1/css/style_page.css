@@ -51,7 +51,8 @@ header .mini-logo {
 }
 
 header nav {
-   margin: 15px 0 0 200px;
+   /*margin: 15px 0 0 200px;*/
+   margin: 15px auto 0 auto;
    float: left;
 }
 
@@ -114,7 +115,7 @@ header .menu a {
 
 .main, footer {
   width: 800px;
-  margin-left: 200px;
+  margin: 0 auto;
 }
 
 .main {
