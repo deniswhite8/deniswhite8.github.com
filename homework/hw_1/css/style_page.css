@@ -29,6 +29,7 @@
 body {
   background: url("../img/bg.jpg");
   border-top: 3px solid black;
+  min-width: 800px;
 }
 
 p a li h3 {
@@ -47,13 +48,12 @@ header .mini-logo {
   font-variant: small-caps;
   margin-left: 10px;
   float: left;
-  width: 190px;
 }
 
 header nav {
-   /*margin: 15px 0 0 200px;*/
-   margin: 15px auto 0 auto;
-   float: left;
+   margin-top: 15px;
+   margin-left: -webkit-calc(50% - 400px);
+   display: inline-block;
 }
 
 header nav p {
