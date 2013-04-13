@@ -79,7 +79,6 @@ header .menu {
   border-radius: 10px;
   box-shadow: 3px 3px 10px gray;
   background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(218,218,218,1) 100%);
-  width: 115px;
 }
 
 header .menu img {
@@ -87,7 +86,7 @@ header .menu img {
 }
 
 header .menu p {
-  margin: 3px 3px 3px 0;
+  margin: 3px 11px 3px 0;
   text-shadow: 1px 1px white;
   display: inline;
 }
