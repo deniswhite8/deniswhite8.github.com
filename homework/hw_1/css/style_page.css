@@ -124,6 +124,14 @@ header .menu a {
   margin-top: 140px;
 }
 
+.main .article:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  clear: both;
+  height: 0;
+}
+
 .main .article aside {
   float: left;
   width: 180px;
@@ -143,10 +151,13 @@ header .menu a {
   margin-bottom: 25px;
 }
 
-.main .article h2 {
+.main .article header {
   margin-bottom: 75px;
   margin-left: 200px;
   width: 600px;
+}
+
+.main .article h2 {
   font-family: 'PT Serif', serif;
   font-size: 24px;
   font-weight: bold;
