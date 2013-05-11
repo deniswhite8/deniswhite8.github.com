@@ -127,7 +127,7 @@ header .menu a {
 .main .article:after {
   content: ".";
   visibility: hidden;
-  display: block;
+  display: block; 
   clear: both;
   height: 0;
 }
