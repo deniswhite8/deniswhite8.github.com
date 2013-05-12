@@ -8,7 +8,7 @@ header .login, .mini-logo {
     left: 0;
     bottom: 0;
     background: black;
-    opacity: 0.3;
+    .opacity(0.3);
     visibility: hidden;
 }
 .login-form {
@@ -19,8 +19,8 @@ header .login, .mini-logo {
         height: 25px;
         margin: 5px 13px 0 0;
         border: 1px solid #989898;
-        border-radius: 3px;
-        background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(204,204,204,1) 100%);
+        .border-radius(3px);
+        .gradient(~"linear-gradient(top, rgba(255,255,255,1) 0%,rgba(204,204,204,1) 100%)");
     }
     * {
         font-size: 14px;
@@ -98,7 +98,7 @@ header {
     width: 365px;
     height: 230px;
     background: white;
-    box-shadow: 0 0 24px rgba(0,0,0,0.5);
+    .box-shadow(~"0 0 24px rgba(0,0,0,0.5)");
     visibility: hidden;
 }
 .news:after {
