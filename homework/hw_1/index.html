@@ -3,38 +3,39 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Новости</title>
-	<!-- <link rel="stylesheet" href="css/style.css"> -->
 	<link rel="stylesheet/less" type="text/css" href="less/index.less">
 	<script src="js/less.js" type="text/javascript"></script>
+	<script src="js/jquery.js" type="text/javascript"></script>
+	<script src="js/loginbox.js" type="text/javascript"></script>
 </head>
 <body>
 	<header id="header">
 		<p class="mini-logo">lorem ipsum news</p>
-		<a href="#" class="login" onclick="show()">Войти</a>
+		<a href="#" class="login" id="login">Войти</a>
 		<h1>Новости</h1>
 		<p class="under-logo">скандалы &bull; интриги &bull; расследования</p>
 	</header>
-	<div class="main" id="main">
-		<div class="news">
+	<section id="main">
+		<article>
 			<div class="flag red">Скандал</div>
 			<img src="img/1.jpg" alt="">
 			<h2><a href="page.html">Страны Евросоюза могут ввести санкции против Google</a></h2>
 			<p>Европейские власти обеспокоены политикой конфиденциальности компании Google. Google хранит личные данные пользователей в&nbsp;одном профиле, в&nbsp;котором может объединяться информация с&nbsp;нескольких десятков разных сайтов.</p>
-		</div>
-		<div class="news">
+		</article>
+		<article>
 			<div class="flag green">Интрига</div>
 			<img src="img/2.jpg" alt="">
 			<h2><a href="#">ФАС уличила ВГТРК в&nbsp;рекламе алкоголя при трансляции футбольного матча</a></h2>
 			<p>Проверка фотографий и&nbsp;видео-записей показала, что на&nbsp;рекламных стендах стадиона &laquo;Стэмфорд Бридж&raquo; во&nbsp;время указанного матча не&nbsp;были размещены рекламные плакаты данных производителей алкогольной продукции. Рассмотрение данного дела ФАС России назначил на&nbsp;15&nbsp;мая 2013&nbsp;года.
 			</p>
-		</div>
-		<div class="news">
+		</article>
+		<article>
 			<div class="flag blue">Расследование</div>
 			<img src="img/3.jpg" alt="">
 			<h2><a href="#">Возобновление борьбы за&nbsp;домены в&nbsp;зоне .рф маловероятно, считают юристы</a></h2>
 			<p>&laquo;По&nbsp;всем 70914 доменным именам поступили заявки от&nbsp;клиентов, желающих их&nbsp;приобрести в&nbsp;указанном порядке&raquo;,&nbsp;&mdash; говорится в&nbsp;тексте судебного решения от&nbsp;16&nbsp;ноября 2011&nbsp;г. Апелляционная инстанция частично удовлетворила иск ФАС, а&nbsp;кассационная передала дело на&nbsp;рассмотрение в&nbsp;президиум ВАС.</p>
-		</div>
-	</div>
+		</article>
+	</section>
 	<footer id="footer">
 		<p class="copy">&copy;ЗАО &laquo;Лорем ипсум ньюс&raquo;</p>
 	</footer>
@@ -44,27 +45,8 @@
 			<input type="text" name="login" placeholder="Логин">
 			<input type="password" name="passwd" placeholder="Пароль">
 			<input type="submit" value="Войти">
-			<a href="#" class="cancel" onclick="hide()">Отмена</a>
+			<a href="#" class="cancel" id="cancel">Отмена</a>
 		</form>
 	</div>
-	<script type="text/javascript">
-		function hide() {
-			document.getElementById('overlay').style.visibility='hidden';
-			document.getElementById('loginBox').style.visibility='hidden';
-			document.getElementById('main').className='main';
-			document.getElementById('header').className='';
-			document.getElementById('footer').className='';
-			return false;
-		}
-
-		function show() {
-			document.getElementById('overlay').style.visibility='visible';
-			document.getElementById('loginBox').style.visibility='visible';
-			document.getElementById('main').className='main blur';
-			document.getElementById('header').className='blur';
-			document.getElementById('footer').className='blur';
-			return false;
-		}
-	</script>
 </body>
 </html>

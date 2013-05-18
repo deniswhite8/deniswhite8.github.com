@@ -35,7 +35,17 @@ header {
             margin: 3px 11px 3px 0;
             text-shadow: 1px 1px white;
             display: inline;
+            padding-left: 10px; 
         }
+        p:before {
+            background: url("../img/tr.png") no-repeat;
+            content: " ";
+            width: 8px;
+            height: 8px;
+            display: inline-block;
+            margin-right: 2px;
+        }
+
         li {
             margin: 3px;
             margin-left: 20px;
@@ -64,6 +74,9 @@ header {
         ul {
             display: block;
             margin-top: 10px;
+        }
+        p:before {
+            background-position: 0 -8px;
         }
     }
     .mini-logo {
@@ -153,5 +166,61 @@ footer {
         font-size: 14px;
         font-weight: bold;
         color: #333;
+    }
+}
+
+
+@media screen and (max-device-width: 640px) {
+    aside {
+        display: none;
+    }
+    .main .article {
+        header, article {
+            margin-left: 0;
+            width: 560px;
+        }
+    }
+
+    .main {
+        width: 560px;
+    }
+
+    .others {
+        p {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .first {
+            margin-left: 0;
+        }
+
+        div {
+            width: 170px;
+            img {
+                width: 170px;
+            }
+        }
+    }
+
+    body {
+        min-width: 640px;
+    }
+
+    header, .main, footer {
+        width: 560px;
+    }
+
+    header {
+        margin: 0 auto;
+        nav {
+            margin-top: 30px;
+        }
+        .mini-logo, nav {
+            margin-left: 0;
+        }
+        .menu {
+            margin-right: 0;
+        }
     }
 }

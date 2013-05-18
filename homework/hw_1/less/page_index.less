@@ -33,7 +33,7 @@ a.login, a.cancel {
     border-bottom: 1px dotted #666;
     line-height: 0.8em;
 }
-.news {
+article {
     position: relative;
     margin-bottom: 55px;
     img {
@@ -53,7 +53,7 @@ a.login, a.cancel {
         }
     }
 }
-.main, footer .copy {
+section, footer .copy {
     width: 800px;
     margin: 0 auto;
 }
@@ -101,7 +101,7 @@ header {
     .box-shadow(~"0 0 24px rgba(0,0,0,0.5)");
     visibility: hidden;
 }
-.news:after {
+article:after {
     content: ".";
     visibility: hidden;
     display: block;
@@ -111,7 +111,7 @@ header {
 .red {
     background: #f66;
 }
-.news p, h2 {
+article p, h2 {
     margin-left: 200px;
 }
 footer {
@@ -144,4 +144,21 @@ header h1, .under-logo {
 }
 .green {
     background: #9c6;
+}
+
+
+@media screen and (max-device-width: 640px) {
+    .flag {
+        left: 148px;
+    }
+    article {
+        h2 {
+            padding-top: 20px;
+        }
+        p {
+            margin-top: 10px;
+            margin-left: 0;
+            float: left;
+        }
+    }
 }
