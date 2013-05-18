@@ -1,5 +1,5 @@
 .main, footer {
-    width: 800px;
+    max-width: 800px;
     margin: 0 auto;
 }
 a {
@@ -113,7 +113,7 @@ footer {
     .article {
         article {
             margin-left: 200px;
-            width: 600px;
+            max-width: 600px;
             font-size: 14px;
             color: #333;
             p {
@@ -123,7 +123,7 @@ footer {
         header {
             margin-bottom: 75px;
             margin-left: 200px;
-            width: 600px;
+            max-width: 600px;
         }
         aside {
             float: left;
@@ -151,7 +151,7 @@ footer {
     padding-top: 20px;
     border-top: 3px solid #b2b2b2;
     div {
-        margin-left: 16px;
+        margin-left: 15px;
         width: 190px;
         float: left;
         p {
@@ -169,21 +169,15 @@ footer {
     }
 }
 
+@media only screen and (max-width: 900px),
+only screen and (max-device-width: 900px) {
 
-@media screen and (max-device-width: 640px) {
-    aside {
-        display: none;
-    }
-    .main .article {
-        header, article {
-            margin-left: 0;
-            width: 560px;
-        }
+    header, .main, footer {
+        margin-left: 50px;
+        margin-right: 50px;
     }
 
-    .main {
-        width: 560px;
-    }
+
 
     .others {
         p {
@@ -203,16 +197,7 @@ footer {
         }
     }
 
-    body {
-        min-width: 640px;
-    }
-
-    header, .main, footer {
-        width: 560px;
-    }
-
     header {
-        margin: 0 auto;
         nav {
             margin-top: 30px;
         }
@@ -221,6 +206,18 @@ footer {
         }
         .menu {
             margin-right: 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 640px),
+only screen and (max-device-width: 640px) {
+    aside {
+        display: none;
+    }
+    .main .article {
+        header, article {
+            margin-left: 0;
         }
     }
 }
