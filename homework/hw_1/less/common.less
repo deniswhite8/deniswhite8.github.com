@@ -1,9 +1,52 @@
+@import "fonts.less";
+@import "lesshat.less";
+
+
 * {
-	padding: 0;
 	margin: 0;
+	padding: 0;
 }
 
 body {
-  background: url("../img/bg.jpg");
-  border-top: 3px solid black;
+	background: url("../img/bg.jpg");
+}
+
+.head {
+	padding: 0 10px 10px 10px;
+	border-top: 3px solid black;
+
+	.page-label {
+		font-family: 'PT Sans', sans-serif;
+		font-size: 24px;
+		font-weight: bold;
+		font-variant: small-caps;
+		float: left;
+	}
+}
+
+.main-layout, footer {
+	width: 80%;
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.clearfix:after {
+	content: ".";
+	visibility: hidden;
+	display: block;
+	clear: both;
+	height: 0;
+}
+
+footer {
+	border-top: 1px solid #666;
+	padding-top: 10px;
+	margin-bottom: 80px;
+
+	.copy {
+		font-family: 'PT Sans', sans-serif;
+		font-size: 12px;
+		color: #666;
+	}
 }

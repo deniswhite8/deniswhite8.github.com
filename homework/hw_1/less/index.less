@@ -1,4 +1,168 @@
-@import "lesshat.less";
-@import "fonts.less";
 @import "common.less";
-@import "page_index.less";
+
+.js-link {
+	font-family: 'PT Sans', sans-serif;
+	text-decoration: none;
+	font-size: 14px;
+	color: #666;
+	border-bottom: 1px dotted #666;
+	line-height: 0.8em;
+}
+
+.head .login {
+	float: right;
+	margin-top: 10px;
+}
+
+.flag {
+	position: absolute;
+	top: -12px;
+	left: -42px;
+	font-size: 14px;
+	font-style: italic;
+	color: white;
+	padding: 3px 7px;
+	font-family: 'PT Sans', sans-serif;
+}
+
+article p, article h2 {
+	margin-left: 200px;
+}
+
+.main-layout {
+	&> header {
+		margin-top: 50px;
+		margin-bottom: 125px;
+
+		.logo {
+			font-family: 'PT Serif', serif;
+			font-weight: bold;
+			font-size: 72px;
+			text-align: center;
+		}
+
+		.under-logo {
+			font-family: 'PT Sans', sans-serif;
+			font-size: 18px;
+			text-align: center;
+		}
+	}
+
+
+	article {
+		position: relative;
+		margin-bottom: 55px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		.red_flag {
+			background: #f66;
+		}
+
+		.green_flag {
+			background: #9c6;
+		}
+
+		.blue_flag {
+			background: #69c;
+		}
+
+		a {
+			text-decoration: underline;
+			color: black;
+		}
+
+		h2 {
+			font-size: 18px;
+			font-weight: normal;
+		}
+
+		p {
+			font-size: 14px;
+			text-align: justify;
+		}
+
+		p, h2 {
+			font-family: 'PT Sans', sans-serif;
+		}
+
+		img {
+			float: left;
+		}
+	}
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: black;
+    .opacity(0.3);
+    display: none;
+}
+
+.login-form {
+    margin: 50px auto 0;
+    width: 240px;
+    input[type=submit] {
+        width: 65px;
+        height: 25px;
+        margin: 5px 13px 0 0;
+        border: 1px solid #989898;
+        .border-radius(3px);
+        .gradient(~"linear-gradient(top, rgba(255,255,255,1) 0%,rgba(204,204,204,1) 100%)");
+    }
+    * {
+        font-size: 14px;
+    }
+}
+
+.blur {
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+}
+
+.login-form input[type=text], input[type=password] {
+    width: 240px;
+    height: 24px;
+    margin: 0 auto;
+    margin-bottom: 18px;
+    padding: 2px;
+}
+.login-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -182px;
+    margin-top: -115px;
+    width: 365px;
+    height: 230px;
+    background: white;
+    .box-shadow(~"0 0 24px rgba(0,0,0,0.5)");
+    display: none;
+}
+
+footer {
+	margin-top: 150px;
+}
+
+@media only screen and (max-width: 640px),
+only screen and (max-device-width: 640px) {
+    .flag {
+        left: 148px;
+    }
+    article {
+        h2 {
+            padding-top: 20px;
+        }
+        p {
+            margin-top: 10px;
+            margin-left: 0;
+            float: left;
+        }
+    }
+}
