@@ -108,6 +108,7 @@ article p, article h2 {
 .login-form {
     margin: 50px auto 0;
     width: 240px;
+
     input[type=submit] {
         width: 65px;
         height: 25px;
@@ -116,8 +117,16 @@ article p, article h2 {
         .border-radius(3px);
         .gradient(~"linear-gradient(top, rgba(255,255,255,1) 0%,rgba(204,204,204,1) 100%)");
     }
+    input[type=text], input[type=password] {
+	    width: 240px;
+	    height: 24px;
+	    margin: 0 auto;
+	    margin-bottom: 18px;
+	    padding: 2px;
+	}
     * {
         font-size: 14px;
+        font-family: 'PT Sans', sans-serif;
     }
 }
 
@@ -126,13 +135,6 @@ article p, article h2 {
     filter: blur(2px);
 }
 
-.login-form input[type=text], input[type=password] {
-    width: 240px;
-    height: 24px;
-    margin: 0 auto;
-    margin-bottom: 18px;
-    padding: 2px;
-}
 .login-box {
     position: fixed;
     top: 50%;
