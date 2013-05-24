@@ -2,10 +2,12 @@ $(document).ready(function() {
 	
 	$('.reply').on('click', function(event) {
 		event.preventDefault();
-		if($(this).text() === 'Ответить') {
+		var use = $(this).data("use");
+		if(use === false || use === undefined) {
 
 			$.each($('.reply'), function(i, val) {
-				if($(val).text() === 'Отмена') $(val).click();
+				if($(val).data("use") === true)
+					$(val).click();
 			});
 
 
@@ -16,10 +18,32 @@ $(document).ready(function() {
 					<input type="submit" value="Добавить комментарий">\
 				</form>');
 			$(this).text('Отмена');
+			$(this).data("use", true);
 		}
 		else {
 			$(this).next().remove();
-			$(this).text('Ответить');		
+			$(this).text('Ответить');
+			$(this).data("use", false);		
 		}
 	});
+
+	$(".comment-form").on('submit', function(event) {
+		event.preventDefault();
+
+		var ok = $(this).data("ok");
+
+		
+		if($(this).find("input[name='name']").val().trim() === "" || $(this).find("textarea[name='message']").val().trim() === "") {
+			if(!ok || ok === undefined) {
+				$(this).after('<p class="warning">Пожалуйста, заполните все поля перед отправкой</p>');
+				$(this).data("ok", true);
+			}
+		}
+		else {
+			if(ok) {
+				$(this).next().remove();
+				$(this).data("ok", false);
+			}
+		}
+	})
 });
