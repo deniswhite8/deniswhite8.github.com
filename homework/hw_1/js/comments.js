@@ -27,7 +27,7 @@ $(document).ready(function() {
 		}
 	});
 
-	$(".comment-form").on('submit', function(event) {
+	$(document).on('submit', '.comment-form', function(event) {
 		event.preventDefault();
 
 		var ok = $(this).data("ok");
@@ -35,7 +35,7 @@ $(document).ready(function() {
 		
 		if($(this).find("input[name='name']").val().trim() === "" || $(this).find("textarea[name='message']").val().trim() === "") {
 			if(!ok || ok === undefined) {
-				$(this).after('<p class="warning">Пожалуйста, заполните все поля перед отправкой</p>');
+				$(this).append('<p class="warning">Пожалуйста, заполните все поля перед отправкой</p>');
 				$(this).data("ok", true);
 			}
 		}
