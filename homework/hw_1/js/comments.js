@@ -38,10 +38,12 @@ $(document).ready(function() {
 				$(this).append('<p class="warning">Пожалуйста, заполните все поля перед отправкой</p>');
 				$(this).data("ok", true);
 			}
+			$(this).find('.warning').animate({'margin-left': '-10px'}, 100).animate({'margin-left': '-20px'}, 100)
+									.animate({'margin-left': '-10px'}, 100).animate({'margin-left': '-20px'}, 100);
 		}
 		else {
 			if(ok) {
-				$(this).next().remove();
+				$(this).find('.warning').remove();
 				$(this).data("ok", false);
 			}
 		}
