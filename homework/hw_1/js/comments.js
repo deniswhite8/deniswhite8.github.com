@@ -17,13 +17,23 @@ $(document).ready(function() {
 					<textarea name="message" placeholder="Введите текст сообщения"></textarea>\
 					<input type="submit" value="Добавить комментарий">\
 				</form>');
+
+			$(this).next().hide();
+			$(this).next().slideDown(400);
+
 			$(this).text('Отмена');
 			$(this).data("use", true);
 		}
 		else {
-			$(this).next().remove();
-			$(this).text('Ответить');
-			$(this).data("use", false);		
+			var next = $(this).next();
+			var th = $(this);
+			$(this).next().slideUp(400, function() {
+				next.remove();
+				th.text('Ответить');
+				th.data("use", false);
+			});
+			// $(this).text('Ответить');
+			// $(this).data("use", false);
 		}
 	});
 
@@ -31,9 +41,10 @@ $(document).ready(function() {
 		event.preventDefault();
 
 		var ok = $(this).data("ok");
-
+		var name = $(this).find("input[name='name']").val().trim();
+		var mess = $(this).find("textarea[name='message']").val().trim();
 		
-		if($(this).find("input[name='name']").val().trim() === "" || $(this).find("textarea[name='message']").val().trim() === "") {
+		if(name === "" || mess === "") {
 			if(!ok || ok === undefined) {
 				$(this).append('<p class="warning">Пожалуйста, заполните все поля перед отправкой</p>');
 				$(this).data("ok", true);

@@ -71,15 +71,6 @@ a {
 	            background-position: 0 -8px;
 	        }
 	    }
-
-	    .mini-logo {
-	        font-size: 24px;
-	        font-weight: bold;
-	        font-variant: small-caps;
-	        margin-left: 10px;
-	        position: absolute;
-	        top: 4px;
-	    }
     }
 
 	nav {
@@ -206,12 +197,14 @@ a {
 	        .gradient(~"linear-gradient(top, rgba(255,255,255,1) 0%,rgba(204,204,204,1) 100%)");
 	        float: right;
 	        padding: 3px;
+	        cursor: pointer;
 	    }
 	    input[type=text] {
 		    width: 240px;
 		    height: 24px;
 		    margin-bottom: 10px;
 		    padding: 2px;
+		    border: 1px solid #ccc;
 		}
 		textarea {
 			width: 100%;
@@ -219,7 +212,8 @@ a {
 		    margin-bottom: 13px;
 		    padding: 2px;
 			resize: none;
-			.transition(~"height 0.5s");
+			border: 1px solid #ccc;
+			.transition(~"height 0.4s 0.3s");
 
 		    &:focus {
 		    	height: 80px;
@@ -235,7 +229,7 @@ a {
 		border-bottom: 1px solid #ccc;
 		margin-bottom: 15px;
 		padding-bottom: 10px;
-		
+
 		.name {
 			font-weight: bold;
 			display: inline;
