@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	
-	$('.reply').on('click', function(event) {
+	$(document).on('click', '.reply', function(event) {
 		event.preventDefault();
 		var use = $(this).data("use");
 		if(use === false || use === undefined) {
@@ -9,8 +9,6 @@ $(document).ready(function() {
 				if($(val).data("use") === true)
 					$(val).click();
 			});
-
-
 
 			$(this).after('<form action="#" class="comment-form clearfix" method="post">\
 					<input type="text" name="name" placeholder="Представьтесь, пожалуйста">\
@@ -32,8 +30,6 @@ $(document).ready(function() {
 				th.text('Ответить');
 				th.data("use", false);
 			});
-			// $(this).text('Ответить');
-			// $(this).data("use", false);
 		}
 	});
 
@@ -57,6 +53,38 @@ $(document).ready(function() {
 				$(this).find('.warning').remove();
 				$(this).data("ok", false);
 			}
+
+			var cur = new Date();
+			var days = ['понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота', 'воскресение'];
+
+
+			var parent = $(this).parent();
+			var thread = false;
+			if(parent.attr('class') === 'comments-box') parent = parent.find('.comment-form');
+			else thread = true;
+
+			var h = cur.getHours(),
+				m = cur.getMinutes(),
+				d = cur.getDate(),
+				mo = (cur.getMonth()+1);
+
+			if(h < 9) h = '0'+h 
+			if(m < 9) m = '0'+m 
+			if(d < 9) d = '0'+d 
+			if(mo < 9) mo = '0'+mo;
+
+
+
+			parent.after((thread?'<div class="thread">':'') + '<div class="comment">\
+				<p class="name">'+name+'</p>\
+				<p class="time">'+h + ':' + m + ', ' + days[cur.getDay()] + ', ' + d + "."+mo + "." + cur.getFullYear() +'</p>\
+				<p class="message">'+mess+'</p>\
+				<a href="#" class="reply">Ответить</a>\
+			</div>'+(thread?'</div>':''));
+
+			$(this).find("input[name='name']").val('');
+			$(this).find("textarea[name='message']").val('')
+			$(this).parent().find('> a.reply').click();
 		}
 	})
 });
