@@ -55,7 +55,7 @@ $(document).ready(function() {
 			}
 
 			var cur = new Date();
-			var days = ['понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота', 'воскресение'];
+			var days = ['воскресение', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'];
 
 
 			var parent = $(this).parent();
@@ -76,11 +76,17 @@ $(document).ready(function() {
 
 
 			parent.after((thread?'<div class="thread">':'') + '<div class="comment">\
-				<p class="name">'+name+'</p>\
+				<p class="name"></p>\
 				<p class="time">'+h + ':' + m + ', ' + days[cur.getDay()] + ', ' + d + "."+mo + "." + cur.getFullYear() +'</p>\
-				<p class="message">'+mess+'</p>\
+				<p class="message"></p>\
 				<a href="#" class="reply">Ответить</a>\
 			</div>'+(thread?'</div>':''));
+
+			var msg = parent.next().find('.message');
+			msg.text(mess);
+			msg.html(msg.html().replace(/\n/g, '<br>'));
+			parent.next().find('.name').text(mess);
+
 
 			$(this).find("input[name='name']").val('');
 			$(this).find("textarea[name='message']").val('')
