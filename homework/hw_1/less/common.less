@@ -17,12 +17,34 @@ body {
 	border-top: 3px solid black;
 
 	.page-label {
-		/*font-family: 'PT Sans', sans-serif;*/
 		font-size: 24px;
 		font-weight: bold;
 		font-variant: small-caps;
 		float: left;
 	}
+}
+
+form {
+	input[type=submit] {
+		height: 25px;
+        border: 1px solid #989898;
+        .border-radius(3px);
+        .gradient(~"linear-gradient(top, rgba(255,255,255,1) 0%,rgba(204,204,204,1) 100%)");
+        padding: 3px;
+        cursor: pointer;
+
+        &:active {
+			.gradient(~"linear-gradient(bottom, rgba(255,255,255,1) 0%,rgba(204,204,204,1) 100%)");
+        }
+	}
+
+	input[type=text], input[type=password] {
+	    height: 24px;
+	    padding: 2px;
+	    border: 1px solid #ccc;
+	    .box-shadow(~"inset 1px 1px 3px #aaa");
+	}
+	
 }
 
 .main-layout, footer {
@@ -46,7 +68,6 @@ footer {
 	margin-bottom: 80px;
 
 	.copy {
-		/*font-family: 'PT Sans', sans-serif;*/
 		font-size: 12px;
 		color: #666;
 	}
